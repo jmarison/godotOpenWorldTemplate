@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4tuc2drf677d"]
+
+[ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://player.tscn" id="1_g6k6q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gcrnv"]
+size = Vector3(50, 2, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jf4yr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3v66s"]
+material = SubResource("StandardMaterial3D_jf4yr")
+size = Vector3(50, 2, 50)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mpylt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tw3ir"]
+albedo_color = Color(0.0823529, 1, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yex4j"]
+material = SubResource("StandardMaterial3D_tw3ir")
+
+[node name="main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_g6k6q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0489311, 0)
+visible = false
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+shape = SubResource("BoxShape3D_gcrnv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+mesh = SubResource("BoxMesh_3v66s")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.994151, 0.107999, 9.69734e-10, -0.101622, -0.935448, 0.338541, 0.0365622, 0.336561, 0.940952, -3.88087, 9.67609, 24.6151)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 13.627)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("CylinderShape3D_mpylt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1.93272, 0)
+mesh = SubResource("CylinderMesh_yex4j")
