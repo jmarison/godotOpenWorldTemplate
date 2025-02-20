@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfh0at27wxuy8"]
+
+[ext_resource type="PackedScene" uid="uid://hkh5bd0mnihm" path="res://Models/Swords/greenSword.glb" id="1_1i7i5"]
+[ext_resource type="PackedScene" uid="uid://bce2ynrxudksu" path="res://Models/Swords/stoneSword.glb" id="2_vdbru"]
+
+[node name="Sword" type="Node3D"]
+
+[node name="blockbench_export" parent="." instance=ExtResource("1_1i7i5")]
+
+[node name="blockbench_export2" parent="." instance=ExtResource("2_vdbru")]
+visible = false

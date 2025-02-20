@@ -8,7 +8,7 @@ var look_dir: Vector2
 @onready var camera = $Camera3D
 var camera_sens = 50
 var capMouse = false
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity = 18.0
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -48,7 +48,7 @@ func _input(event: InputEvent):
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
 	
 func _rotate_camera(delta: float, sens_mod: float = 1.0):
-	var input = Input.get_vector("look_left", "look_right","look_down", "look_up")
+	var input = Input.get_vector("ui_left", "ui_right","ui_down", "ui_up")
 	look_dir += input
 	rotation.y -= look_dir.x * camera_sens * delta
 	camera.rotation.x = clamp(camera.rotation.x - look_dir.y * camera_sens * sens_mod * delta, -1.5, 1.5)
