@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd07lgriiu5bt"]
+[gd_scene load_steps=6 format=3 uid="uid://bd07lgriiu5bt"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_8rkjh"]
 [ext_resource type="Material" uid="uid://d3aaqqkw8urv4" path="res://materials/block.tres" id="2_1rnv4"]
+[ext_resource type="PackedScene" uid="uid://drumm5isdd8hs" path="res://Objects/shotgun.tscn" id="3_dw4bu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_itarw"]
 
@@ -20,5 +21,9 @@ mesh = SubResource("CapsuleMesh_oigxk")
 [node name="Head" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.576645, -0.0759158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.550916, -0.0759158)
 fov = 90.0
+
+[node name="Shotgun" parent="Head/Camera3D" instance=ExtResource("3_dw4bu")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
+rotation_order = 0

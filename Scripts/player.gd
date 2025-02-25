@@ -2,18 +2,26 @@ extends CharacterBody3D
 
 var SPEED = 5.0
 const JUMP_VELOCITY = 8.5
-const BOB_FREQ = 2.0
-const BOB_AMP = 0.08
+const BOB_FREQ = 1.4
+const BOB_AMP = 0.04
 var t_bob = 0.0
 
 
 var look_dir: Vector2
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+#guns
+@onready var shotgun = $Head/Camera3D/Shotgun
+@onready var shotgunShootAnimation = $Head/Camera3D/Shotgun/AnimationPlayer
+
+	 
+	
+	
 var camera_sens = 50
 var capMouse = false
 var gravity = 18.0
 
+	
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -48,15 +56,18 @@ func _physics_process(delta):
 			
 	#head bob
 	t_bob += delta * velocity.length() * float(is_on_floor())
-	camera.transform.origin = _headbob(t_bob)
+	shotgun.transform.origin = _headbob(t_bob) + Vector3(0.202, -0.225, -.454)
 	
+	 
+	
+	#_shoot_auto()
 	_rotate_camera(delta)
 	move_and_slide()
 	
 
-
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
+	if event is InputEventMouseButton: shotgunShootAnimation.play("shotgunShoot")
 	
 func _rotate_camera(delta: float, sens_mod: float = 1.0):
 	var input = Input.get_vector("ui_left", "ui_right","ui_down", "ui_up")
@@ -64,8 +75,15 @@ func _rotate_camera(delta: float, sens_mod: float = 1.0):
 	rotation.y -= look_dir.x * camera_sens * delta
 	camera.rotation.x = clamp(camera.rotation.x - look_dir.y * camera_sens * sens_mod * delta, -1.5, 1.5)
 	look_dir = Vector2.ZERO
+	shotgun.rotation.y = 3.14159 
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	return pos
+
+	
+func _shoot_auto():
+	if !shotgunShootAnimation.is_playing():
+		shotgunShootAnimation.play("shotgunShoot")
+		

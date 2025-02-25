@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=16 format=3 uid="uid://b4tuc2drf677d"]
 
-[ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_mtppo"]
+[ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
 [ext_resource type="Material" uid="uid://d3aaqqkw8urv4" path="res://materials/block.tres" id="2_hqlnn"]
 [ext_resource type="PackedScene" uid="uid://d2f3f2bexk30h" path="res://Objects/tree.tscn" id="3_gq4va"]
 [ext_resource type="PackedScene" uid="uid://cfh0at27wxuy8" path="res://Objects/sword.tscn" id="4_hxkqo"]
 [ext_resource type="MeshLibrary" uid="uid://c7ncuruqxlca4" path="res://Tile Maps/blocks.tres" id="5_81feu"]
+[ext_resource type="PackedScene" uid="uid://cets50ajuf5rx" path="res://Objects/sunflower.tscn" id="6_jq0pt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xqwhi"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -36,6 +37,8 @@ material = SubResource("StandardMaterial3D_tw3ir")
 
 [node name="main" type="Node"]
 
+[node name="Player" parent="." instance=ExtResource("1_q24fy")]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_fbgnn")
 
@@ -43,10 +46,6 @@ environment = SubResource("Environment_fbgnn")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 9.98447, 0)
 shadow_enabled = true
 shadow_opacity = 0.7
-
-[node name="Player" parent="." instance=ExtResource("1_mtppo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0489311, 0)
-visible = false
 
 [node name="Ground" type="StaticBody3D" parent="."]
 
@@ -327,6 +326,9 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 metadata/_edit_group_ = true
 
+[node name="Sunflower" parent="Ground" instance=ExtResource("6_jq0pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34868, 0, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.627)
 
@@ -337,3 +339,14 @@ shape = SubResource("CylinderShape3D_mpylt")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("CylinderMesh_yex4j")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
