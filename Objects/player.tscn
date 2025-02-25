@@ -33,3 +33,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0629836, -0.430031)
 target_position = Vector3(0, 0, -100)
 collision_mask = 2
 collide_with_areas = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 0.628

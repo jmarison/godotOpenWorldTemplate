@@ -43,7 +43,7 @@ func _physics_process(delta):
 			velocity.z = direction.z * SPEED
 		else:
 			velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 7.0)
-		velocity.z = lerp(velocity.z, direction.z * SPEED, delta * 7.0)
+			velocity.z = lerp(velocity.z, direction.z * SPEED, delta * 7.0)
 	else:
 		velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 4.0)
 		velocity.z = lerp(velocity.z, direction.z * SPEED, delta * 4.0)
