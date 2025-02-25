@@ -27,3 +27,9 @@ fov = 90.0
 [node name="Shotgun" parent="Head/Camera3D" instance=ExtResource("3_dw4bu")]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 rotation_order = 0
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0629836, -0.430031)
+target_position = Vector3(0, 0, -100)
+collision_mask = 2
+collide_with_areas = true

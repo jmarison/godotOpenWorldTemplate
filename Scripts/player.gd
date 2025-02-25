@@ -14,6 +14,8 @@ var look_dir: Vector2
 @onready var shotgun = $Head/Camera3D/Shotgun
 @onready var shotgunShootAnimation = $Head/Camera3D/Shotgun/AnimationPlayer
 
+@onready var LOS = $Head/Camera3D/RayCast3D
+
 	 
 	
 	
@@ -53,7 +55,10 @@ func _physics_process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			
+	if Input.is_action_just_pressed("lmb") && !shotgunShootAnimation.is_playing():
+		shotgunShootAnimation.play("shotgunShoot")
+		
+		
 	#head bob
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	shotgun.transform.origin = _headbob(t_bob) + Vector3(0.202, -0.225, -.454)
@@ -67,7 +72,6 @@ func _physics_process(delta):
 
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion: look_dir = event.relative * 0.01
-	if event is InputEventMouseButton: shotgunShootAnimation.play("shotgunShoot")
 	
 func _rotate_camera(delta: float, sens_mod: float = 1.0):
 	var input = Input.get_vector("ui_left", "ui_right","ui_down", "ui_up")
@@ -83,7 +87,10 @@ func _headbob(time) -> Vector3:
 	return pos
 
 	
-func _shoot_auto():
+func _shoot():
 	if !shotgunShootAnimation.is_playing():
 		shotgunShootAnimation.play("shotgunShoot")
+		if LOS.is_colliding():
+			if LOS.getcollider.is_in_group("enemy"):
+				LOS.get_collider().hit()
 		
