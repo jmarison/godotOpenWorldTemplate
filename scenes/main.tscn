@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=19 format=3 uid="uid://b4tuc2drf677d"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b4nqm"]
 [ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cfh0at27wxuy8" path="res://Objects/sword.tscn" id="4_hxkqo"]
 [ext_resource type="MeshLibrary" uid="uid://c7ncuruqxlca4" path="res://Tile Maps/blocks.tres" id="5_81feu"]
 [ext_resource type="Texture2D" uid="uid://2n7tpttgm8at" path="res://Models/MuzzleFlash/crosshair.png" id="8_l5xxe"]
+[ext_resource type="PackedScene" uid="uid://co3opo20b1sq6" path="res://Objects/zombie.tscn" id="9_cngse"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ufiw8"]
 panorama = ExtResource("3_1xqcj")
@@ -353,3 +354,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("8_l5xxe")
+
+[node name="Zombie" parent="." instance=ExtResource("9_cngse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.62366)

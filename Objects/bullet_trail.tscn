@@ -13,7 +13,7 @@ material_override = SubResource("StandardMaterial3D_2ssv5")
 script = ExtResource("1_vmiqh")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.25
+wait_time = 0.35
 one_shot = true
 autostart = true
 
