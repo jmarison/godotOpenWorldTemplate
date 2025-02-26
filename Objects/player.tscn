@@ -28,11 +28,14 @@ fov = 90.0
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 rotation_order = 0
 
-[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0629836, -0.430031)
+[node name="AimRay" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.633)
 target_position = Vector3(0, 0, -100)
-collision_mask = 2
+collision_mask = 3
 collide_with_areas = true
+
+[node name="AimRayEnd" type="Node3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100.633)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_energy = 0.628

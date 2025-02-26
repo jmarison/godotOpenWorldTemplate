@@ -7,18 +7,21 @@ const BOB_AMP = 0.04
 var t_bob = 0.0
 
 
+
 var look_dir: Vector2
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 #guns
 @onready var shotgun = $Head/Camera3D/Shotgun
 @onready var shotgunShootAnimation = $Head/Camera3D/Shotgun/AnimationPlayer
+@onready var barrel = $Head/Camera3D/Shotgun/Barrel
 
-@onready var LOS = $Head/Camera3D/RayCast3D
+@onready var LOS = $Head/Camera3D/AimRay
+@onready var endLOS = $Head/Camera3D/AimRayEnd
 
-	 
-	
-	
+var bullet_trail = load("res://Objects/bullet_trail.tscn")
+var instance
+
 var camera_sens = 50
 var capMouse = false
 var gravity = 18.0
@@ -55,8 +58,8 @@ func _physics_process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if Input.is_action_just_pressed("lmb") && !shotgunShootAnimation.is_playing():
-		shotgunShootAnimation.play("shotgunShoot")
+	if Input.is_action_just_pressed("lmb"):
+		_shoot()
 		
 		
 	#head bob
@@ -90,7 +93,11 @@ func _headbob(time) -> Vector3:
 func _shoot():
 	if !shotgunShootAnimation.is_playing():
 		shotgunShootAnimation.play("shotgunShoot")
+		instance = bullet_trail.instantiate()
 		if LOS.is_colliding():
-			if LOS.getcollider.is_in_group("enemy"):
-				LOS.get_collider().hit()
-		
+			instance.init(barrel.global_position, LOS.get_collision_point())
+			#if LOS.get_collider.is_in_group("enemy"):
+				#LOS.get_collider().hit()
+		else:
+			instance.init(barrel.global_position, endLOS.global_position)
+		get_parent().add_child(instance)

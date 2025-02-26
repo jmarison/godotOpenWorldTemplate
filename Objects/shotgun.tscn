@@ -183,3 +183,6 @@ libraries = {
 transform = Transform3D(-0.16, 0, -6.03983e-08, 0, 0.4, 0, 2.41593e-08, 0, -0.4, 0.0147118, 0.0284136, 0.419278)
 mesh = SubResource("PlaneMesh_x3sdb")
 surface_material_override/0 = SubResource("StandardMaterial3D_ibvaf")
+
+[node name="Barrel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0116021, 0.0197447, 0.40887)

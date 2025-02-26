@@ -16,7 +16,9 @@ panorama = ExtResource("3_1xqcj")
 sky_material = SubResource("PanoramaSkyMaterial_ufiw8")
 
 [sub_resource type="Environment" id="Environment_80wie"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.972659, 0.886775, 0.761834, 1)
+background_energy_multiplier = 0.64
 sky = SubResource("Sky_o4xql")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gcrnv"]
@@ -57,6 +59,7 @@ shape = SubResource("BoxShape3D_gcrnv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+material_override = ExtResource("2_hqlnn")
 mesh = SubResource("BoxMesh_3v66s")
 
 [node name="blocks" type="CSGBox3D" parent="Ground"]
