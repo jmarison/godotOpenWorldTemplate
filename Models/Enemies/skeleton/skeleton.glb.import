@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dw5mh2qw480ea"
-path="res://.godot/imported/skeleton.glb-a90005c4d964ca0900a3f6fb0258d8f4.scn"
+path="res://.godot/imported/skeleton.glb-6ee23b90812194277ba9d6206d7388e0.scn"
 
 [deps]
 
-source_file="res://Models/Enemies/skeleton.glb"
-dest_files=["res://.godot/imported/skeleton.glb-a90005c4d964ca0900a3f6fb0258d8f4.scn"]
+source_file="res://Models/Enemies/skeleton/skeleton.glb"
+dest_files=["res://.godot/imported/skeleton.glb-6ee23b90812194277ba9d6206d7388e0.scn"]
 
 [params]
 

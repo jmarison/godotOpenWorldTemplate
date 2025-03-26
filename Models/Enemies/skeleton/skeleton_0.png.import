@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbw6mar2cqw66"
-path.s3tc="res://.godot/imported/skeleton_0.png-6a00ad17e3de4bf0bae30d367aaa141a.s3tc.ctex"
+path.s3tc="res://.godot/imported/skeleton_0.png-9eacee66a0ef6682186459edb5a80f4f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Models/Enemies/skeleton_0.png"
-dest_files=["res://.godot/imported/skeleton_0.png-6a00ad17e3de4bf0bae30d367aaa141a.s3tc.ctex"]
+source_file="res://Models/Enemies/skeleton/skeleton_0.png"
+dest_files=["res://.godot/imported/skeleton_0.png-9eacee66a0ef6682186459edb5a80f4f.s3tc.ctex"]
 
 [params]
 

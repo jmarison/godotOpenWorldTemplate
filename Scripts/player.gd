@@ -59,8 +59,8 @@ func _physics_process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if Input.is_action_just_pressed("lmb"):
-		_shoot()
+	#if Input.is_action_just_pressed("lmb"):
+		#_shoot()
 		
 		
 	#head bob
@@ -91,17 +91,22 @@ func _headbob(time) -> Vector3:
 	return pos
 
 	
-func _shoot():
-	if !shotgunShootAnimation.is_playing():
-		shotgunShootAnimation.play("shotgunShoot")
-		for i in range(7):
-			var instance = bullet_trail.instantiate()
-			var spread = Vector3(rng.randf_range(-1.0, 1.0), rng.randf_range(-1.0, 1.0), rng.randf_range(-1.0, 1.0))
-		
-			if LOS.is_colliding():
-				instance.init(barrel.global_position, LOS.get_collision_point() + spread * .4)
-				# if LOS.get_collider().is_in_group("enemy"):
-				#     LOS.get_collider().hit()
-			else:
-				instance.init(barrel.global_position, endLOS.global_position + spread * 2.5)
-			get_parent().add_child(instance)
+#func _shoot():
+	#if !shotgunShootAnimation.is_playing():
+		#shotgunShootAnimation.play("shotgunShoot")
+		#for i in range(7):
+			#var instance = bullet_trail.instantiate()
+			#var spread = Vector3(rng.randf_range(-1.0, 1.0), rng.randf_range(-1.0, 1.0), rng.randf_range(-1.0, 1.0))
+		#
+			#if LOS.is_colliding():
+				#instance.init(barrel.global_position, LOS.get_collision_point() + spread * .4)
+				## if LOS.get_collider().is_in_group("enemy"):
+				##     LOS.get_collider().hit()
+			#else:
+				#instance.init(barrel.global_position, endLOS.global_position + spread * 2.5)
+			#get_parent().add_child(instance)
+			
+# ------ ITEMS STUFF -------
+
+func on_item_picked_up(item:Item):
+	print("picked up a ", item.name)

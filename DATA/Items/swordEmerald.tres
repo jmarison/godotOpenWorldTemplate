@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://8b30f3xxr7m8"]
+
+[ext_resource type="Script" path="res://DATA/Items/Item.gd" id="1_3klkr"]
+[ext_resource type="PackedScene" uid="uid://ccxy42et8t05a" path="res://Models/Swords/greenSword.glb" id="1_xat1y"]
+
+[resource]
+script = ExtResource("1_3klkr")
+name = "swordEmerald"
+scene = ExtResource("1_xat1y")
