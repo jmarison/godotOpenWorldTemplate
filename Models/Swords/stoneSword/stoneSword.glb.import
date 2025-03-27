@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bce2ynrxudksu"
-path="res://.godot/imported/stoneSword.glb-0cf4ebafe0ba9d6b1525cec9df6d19e4.scn"
+path="res://.godot/imported/stoneSword.glb-260be91a9501e8207fe946b94f91dfeb.scn"
 
 [deps]
 
-source_file="res://Models/Swords/stoneSword.glb"
-dest_files=["res://.godot/imported/stoneSword.glb-0cf4ebafe0ba9d6b1525cec9df6d19e4.scn"]
+source_file="res://Models/Swords/stoneSword/stoneSword.glb"
+dest_files=["res://.godot/imported/stoneSword.glb-260be91a9501e8207fe946b94f91dfeb.scn"]
 
 [params]
 

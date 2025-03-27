@@ -6,7 +6,7 @@ const BOB_FREQ = 1.4
 const BOB_AMP = 0.04
 var t_bob = 0.0
 var rng = RandomNumberGenerator.new()
-
+var inventory:Inventory = Inventory.new()
 
 
 var look_dir: Vector2
@@ -109,4 +109,4 @@ func _headbob(time) -> Vector3:
 # ------ ITEMS STUFF -------
 
 func on_item_picked_up(item:Item):
-	print("picked up a ", item.name)
+	inventory.add_item(item)

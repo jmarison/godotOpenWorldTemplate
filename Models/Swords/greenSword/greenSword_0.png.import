@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5yyfxt5mxt4y"
-path.s3tc="res://.godot/imported/stoneSword_0.png-5fb4d972837179442a05553eccd65deb.s3tc.ctex"
+uid="uid://cerrfwgw6et5o"
+path.s3tc="res://.godot/imported/greenSword_0.png-7810a1e103c566fc2b5c35f8ac861965.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0e8a12a8416bb70fc73adfdae422d217"
+"md5": "410a927a7aef9742286344e29b4e5662"
 }
 
 [deps]
 
-source_file="res://Models/Swords/stoneSword_0.png"
-dest_files=["res://.godot/imported/stoneSword_0.png-5fb4d972837179442a05553eccd65deb.s3tc.ctex"]
+source_file="res://Models/Swords/greenSword/greenSword_0.png"
+dest_files=["res://.godot/imported/greenSword_0.png-7810a1e103c566fc2b5c35f8ac861965.s3tc.ctex"]
 
 [params]
 

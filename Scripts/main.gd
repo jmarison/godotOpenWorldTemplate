@@ -1,5 +1,6 @@
 extends Node
-@onready var crosshair = $UI/TextureRect
+@onready var crosshair: TextureRect = %TextureRect
+
 
 func _ready() -> void:
 	randomize()

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfh0at27wxuy8"]
 
-[ext_resource type="PackedScene" uid="uid://hkh5bd0mnihm" path="res://Models/Swords/greenSword.glb" id="1_1i7i5"]
-[ext_resource type="PackedScene" uid="uid://bce2ynrxudksu" path="res://Models/Swords/stoneSword.glb" id="2_vdbru"]
+[ext_resource type="PackedScene" uid="uid://ccxy42et8t05a" path="res://Models/Swords/greenSword/greenSword.glb" id="1_1i7i5"]
+[ext_resource type="PackedScene" uid="uid://bce2ynrxudksu" path="res://Models/Swords/stoneSword/stoneSword.glb" id="2_vdbru"]
 
 [node name="Sword" type="Node3D"]
 

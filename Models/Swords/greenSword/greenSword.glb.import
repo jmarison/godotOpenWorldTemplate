@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ccxy42et8t05a"
-path="res://.godot/imported/greenSword.glb-61d0686d481e6d909830eae33179b9ba.scn"
+path="res://.godot/imported/greenSword.glb-871eeeb1a7de7834f1d5bbb9a617d243.scn"
 
 [deps]
 
-source_file="res://Models/Swords/greenSword.glb"
-dest_files=["res://.godot/imported/greenSword.glb-61d0686d481e6d909830eae33179b9ba.scn"]
+source_file="res://Models/Swords/greenSword/greenSword.glb"
+dest_files=["res://.godot/imported/greenSword.glb-871eeeb1a7de7834f1d5bbb9a617d243.scn"]
 
 [params]
 

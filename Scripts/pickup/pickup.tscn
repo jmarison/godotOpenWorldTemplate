@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ben2e7g2seqhm"]
 
-[ext_resource type="Script" path="res://Objects/pickup/pickup.gd" id="1_vuei2"]
+[ext_resource type="Script" path="res://Scripts/pickup/pickup.gd" id="1_vuei2"]
 [ext_resource type="Resource" uid="uid://binpddblg6j6q" path="res://DATA/Items/sword.tres" id="2_6pt1r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yd4e2"]

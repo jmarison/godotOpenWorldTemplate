@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://8b30f3xxr7m8"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://8b30f3xxr7m8"]
 
 [ext_resource type="Script" path="res://DATA/Items/Item.gd" id="1_3klkr"]
-[ext_resource type="PackedScene" uid="uid://ccxy42et8t05a" path="res://Models/Swords/greenSword.glb" id="1_xat1y"]
+[ext_resource type="Texture2D" uid="uid://dftbuynhogb60" path="res://Models/Swords/greenSword/greenSwordIcon.png" id="1_525wl"]
+[ext_resource type="PackedScene" uid="uid://ccxy42et8t05a" path="res://Models/Swords/greenSword/greenSword.glb" id="2_w4wwp"]
 
 [resource]
 script = ExtResource("1_3klkr")
 name = "swordEmerald"
-scene = ExtResource("1_xat1y")
+scene = ExtResource("2_w4wwp")
+icon = ExtResource("1_525wl")
