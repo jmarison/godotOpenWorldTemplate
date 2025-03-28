@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=25 format=3 uid="uid://b4tuc2drf677d"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b4nqm"]
 [ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
@@ -6,9 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://bus7v7n0em8js" path="res://materials/SunsetSky.png" id="3_1xqcj"]
 [ext_resource type="PackedScene" uid="uid://d2f3f2bexk30h" path="res://Objects/tree.tscn" id="3_gq4va"]
 [ext_resource type="MeshLibrary" uid="uid://c7ncuruqxlca4" path="res://Tile Maps/blocks.tres" id="5_81feu"]
+[ext_resource type="Resource" uid="uid://ba25fhtyrmck7" path="res://DATA/Items/stone.tres" id="8_57hkx"]
 [ext_resource type="Texture2D" uid="uid://2n7tpttgm8at" path="res://Models/MuzzleFlash/crosshair.png" id="8_l5xxe"]
 [ext_resource type="PackedScene" uid="uid://co3opo20b1sq6" path="res://Objects/zombie.tscn" id="9_cngse"]
+[ext_resource type="Resource" uid="uid://x54vhgssgqrt" path="res://DATA/Items/wood.tres" id="9_we53u"]
 [ext_resource type="PackedScene" uid="uid://ben2e7g2seqhm" path="res://Scripts/pickup/pickup.tscn" id="9_wuo84"]
+[ext_resource type="Resource" uid="uid://dwthdb76inmpu" path="res://DATA/Items/coal.tres" id="10_46vl1"]
 [ext_resource type="Resource" uid="uid://8b30f3xxr7m8" path="res://DATA/Items/swordEmerald.tres" id="11_6dxec"]
 [ext_resource type="Script" path="res://Scripts/uiroot.gd" id="11_dq4a8"]
 [ext_resource type="PackedScene" uid="uid://dk1ugxvv7c5rw" path="res://Scripts/inventory/inventoryDialogue.tscn" id="12_2xdqo"]
@@ -330,6 +333,18 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 metadata/_edit_group_ = true
 
+[node name="Pickup" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 1.31689, -8.53557)
+item = ExtResource("8_57hkx")
+
+[node name="Pickup2" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 1.31689, -9.75672)
+item = ExtResource("9_we53u")
+
+[node name="Pickup3" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 1.31689, -11.2429)
+item = ExtResource("10_46vl1")
+
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.627)
 
@@ -345,9 +360,10 @@ mesh = SubResource("CylinderMesh_yex4j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.62366)
 
 [node name="Pickup" parent="." instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.295768, 0)
 
 [node name="eSword" parent="." instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 1.31689, -2.4487)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.348302, -2.4487)
 item = ExtResource("11_6dxec")
 
 [node name="Inventory" type="CanvasLayer" parent="."]

@@ -10,3 +10,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.has_method("on_item_picked_up"):
 		body.on_item_picked_up(item)
 		queue_free()
+
+func _process(delta: float) -> void:
+	rotate_y(0.008)
