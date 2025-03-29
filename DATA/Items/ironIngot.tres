@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c5nunpb23uw65"]
+
+[ext_resource type="PackedScene" uid="uid://dg21l87veeoph" path="res://Models/Items/ironIngot.glb" id="1_8vdp2"]
+[ext_resource type="Texture2D" uid="uid://h8wygn8m3kee" path="res://Models/Items/itemIcons/ironIngotIcon.png" id="1_86vxf"]
+[ext_resource type="Script" path="res://DATA/Items/Item.gd" id="1_kyqsw"]
+
+[resource]
+script = ExtResource("1_kyqsw")
+name = "Iron Ingot"
+scene = ExtResource("1_8vdp2")
+icon = ExtResource("1_86vxf")

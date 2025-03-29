@@ -21,7 +21,6 @@ var look_dir: Vector2
 @onready var endLOS = $Head/Camera3D/AimRayEnd
 
 var bullet_trail = load("res://Objects/bullet_trail.tscn")
-var instance
 
 var camera_sens = 30
 var capMouse = false
