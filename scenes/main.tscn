@@ -370,7 +370,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -8.29812)
 item = ExtResource("13_p66d7")
 
 [node name="Pickup9" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -7.12902)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -15.4386)
 item = ExtResource("14_uerq5")
 
 [node name="Pickup10" parent="Ground" instance=ExtResource("9_wuo84")]
