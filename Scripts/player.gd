@@ -5,8 +5,12 @@ const JUMP_VELOCITY = 8.5
 const BOB_FREQ = 1.4
 const BOB_AMP = 0.04
 var t_bob = 0.0
+var camera_sens = 30
+var capMouse = false
+var gravity = 18.0
 var rng = RandomNumberGenerator.new()
 var inventory:Inventory = Inventory.new()
+
 
 
 var look_dir: Vector2
@@ -22,9 +26,7 @@ var look_dir: Vector2
 
 var bullet_trail = load("res://Objects/bullet_trail.tscn")
 
-var camera_sens = 30
-var capMouse = false
-var gravity = 18.0
+
 
 	
 func _physics_process(delta):
@@ -91,19 +93,20 @@ func _headbob(time) -> Vector3:
 
 	
 func _shoot():
-	if !shotgunShootAnimation.is_playing():
-		shotgunShootAnimation.play("shotgunShoot")
-		for i in range(7):
-			var instance = bullet_trail.instantiate()
-			var spread = Vector3(rng.randf_range(-1.0, 1.0), rng.randf_range(-1.0, 1.0), rng.randf_range(-1.0, 1.0))
-		
-			if LOS.is_colliding():
-				instance.init(barrel.global_position, LOS.get_collision_point() + spread * .4)
-				# if LOS.get_collider().is_in_group("enemy"):
-				#     LOS.get_collider().hit()
-			else:
-				instance.init(barrel.global_position, endLOS.global_position + spread * 2.5)
-			get_parent().add_child(instance)
+	#if !shotgunShootAnimation.is_playing():
+		#shotgunShootAnimation.play("shotgunShoot")
+		#for i in range(7):
+			#var instance = bullet_trail.instantiate()
+			#var spread = Vector3(rng.randf_range(-1.0, 1.0), rng.randf_range(-1.0, 1.0), rng.randf_range(-1.0, 1.0))
+		#
+			#if LOS.is_colliding():
+				#instance.init(barrel.global_position, LOS.get_collision_point() + spread * .4)
+				## if LOS.get_collider().is_in_group("enemy"):
+				##     LOS.get_collider().hit()
+			#else:
+				#instance.init(barrel.global_position, endLOS.global_position + spread * 2.5)
+			#get_parent().add_child(instance)
+			pass
 			
 # ------ ITEMS STUFF -------
 
