@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ewckklgi4alk"
-path="res://.godot/imported/swordIcon.png-5a1cd8aa151dbf3139834cc4439948cd.ctex"
+uid="uid://ciwl1nqy27m8i"
+path="res://.godot/imported/grimSwordIcon.png-8acb1e4e57a9fe9f03e351efa084d15b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Models/Swords/stoneSword/swordIcon.png"
-dest_files=["res://.godot/imported/swordIcon.png-5a1cd8aa151dbf3139834cc4439948cd.ctex"]
+source_file="res://Models/Items/itemIcons/grimSwordIcon.png"
+dest_files=["res://.godot/imported/grimSwordIcon.png-8acb1e4e57a9fe9f03e351efa084d15b.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=33 format=3 uid="uid://b4tuc2drf677d"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b4nqm"]
 [ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://cak26wqafjw73" path="res://DATA/Items/goldIngot.tres" id="13_p66d7"]
 [ext_resource type="Resource" uid="uid://311aewp742o0" path="res://DATA/Items/torch.tres" id="14_uerq5"]
 [ext_resource type="Resource" uid="uid://dax7xojrmkg5c" path="res://DATA/Items/Thatch.tres" id="15_3yvyn"]
+[ext_resource type="Resource" uid="uid://8xicv6bkknbs" path="res://DATA/Items/grimSword.tres" id="17_2susn"]
 [ext_resource type="PackedScene" uid="uid://bu355ql2jylkn" path="res://Objects/torch.tscn" id="20_3kdpf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c803k"]
@@ -370,7 +371,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -8.29812)
 item = ExtResource("13_p66d7")
 
 [node name="Pickup9" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -15.4386)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -7.06116)
 item = ExtResource("14_uerq5")
 
 [node name="Pickup10" parent="Ground" instance=ExtResource("9_wuo84")]
@@ -393,6 +394,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.62366)
 
 [node name="Pickup" parent="." instance=ExtResource("9_wuo84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 0)
+
+[node name="Pickup2" parent="." instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 1.09531)
+item = ExtResource("17_2susn")
 
 [node name="eSword" parent="." instance=ExtResource("9_wuo84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.316548, -2.4487)

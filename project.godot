@@ -80,6 +80,10 @@ inventory={
 ]
 }
 
+[physics]
+
+common/physics_ticks_per_second=200
+
 [rendering]
 
 renderer/rendering_method.mobile="forward_plus"
