@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b084j5ynudocn"]
 
 [ext_resource type="Script" path="res://Scripts/inventory/item_slot.gd" id="1_je7co"]
-[ext_resource type="Texture2D" uid="uid://ewckklgi4alk" path="res://Models/Swords/stoneSword/swordIcon.png" id="2_mlt7e"]
+[ext_resource type="Texture2D" uid="uid://deent7wuubknv" path="res://Models/Items/itemIcons/stoneSwordIcon.png" id="2_n8sv6"]
 
 [node name="ItemSlot" type="PanelContainer"]
 script = ExtResource("1_je7co")
@@ -9,4 +9,4 @@ script = ExtResource("1_je7co")
 [node name="TextureRect" type="TextureRect" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-texture = ExtResource("2_mlt7e")
+texture = ExtResource("2_n8sv6")

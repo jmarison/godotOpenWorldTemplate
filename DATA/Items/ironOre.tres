@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b4hlcywe2xlre"]
+
+[ext_resource type="Texture2D" uid="uid://h3wucut7wstn" path="res://Models/Items/itemIcons/ironOreIcon.png" id="1_jkiba"]
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_wix7e"]
+[ext_resource type="PackedScene" uid="uid://djt2rw73bsdif" path="res://Models/Items/ironOre.glb" id="2_wv83m"]
+
+[resource]
+script = ExtResource("1_wix7e")
+name = "Iron Ore"
+scene = ExtResource("2_wv83m")
+icon = ExtResource("1_jkiba")

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://b7bnuv1mc1btd"]
+
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_8igow"]
+[ext_resource type="Script" path="res://Scripts/Crafting/recipe.gd" id="2_v454c"]
+[ext_resource type="Resource" uid="uid://ba25fhtyrmck7" path="res://DATA/Items/stone.tres" id="2_x607m"]
+[ext_resource type="Resource" uid="uid://qetx4trmp1ki" path="res://DATA/Items/sticks.tres" id="3_2557b"]
+[ext_resource type="Resource" uid="uid://dax7xojrmkg5c" path="res://DATA/Items/Thatch.tres" id="4_1ij8x"]
+[ext_resource type="Resource" uid="uid://binpddblg6j6q" path="res://DATA/Items/sword.tres" id="5_m0q41"]
+
+[resource]
+script = ExtResource("2_v454c")
+name = "Stone Sword"
+ingredients = Array[ExtResource("1_8igow")]([ExtResource("2_x607m"), ExtResource("2_x607m"), ExtResource("3_2557b"), ExtResource("4_1ij8x")])
+results = Array[ExtResource("1_8igow")]([ExtResource("5_m0q41")])

@@ -90,5 +90,4 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.622975, 0)
-light_color = Color(0.893087, 0.603809, 0.293304, 1)
-light_energy = 0.575
+light_color = Color(0.894118, 0.490196, 0.294118, 1)

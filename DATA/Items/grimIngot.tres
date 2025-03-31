@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b0jfdkbhoplxa"]
 
 [ext_resource type="Texture2D" uid="uid://dbfnqv6ifdfgj" path="res://Models/Items/itemIcons/grimIngotIcon.png" id="1_1ji0r"]
-[ext_resource type="Script" path="res://DATA/Items/Item.gd" id="1_3pevt"]
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_3pevt"]
 [ext_resource type="PackedScene" uid="uid://bwxowerbs2f7n" path="res://Models/Items/grimIngot.glb" id="1_gwx11"]
 
 [resource]

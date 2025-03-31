@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dwthdb76inmpu"]
 
-[ext_resource type="Script" path="res://DATA/Items/Item.gd" id="1_anp0w"]
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_anp0w"]
 [ext_resource type="PackedScene" uid="uid://dalyetcq1cbwl" path="res://Models/Items/coal.glb" id="1_q0hr3"]
 [ext_resource type="Texture2D" uid="uid://d2ngro1cgkvsf" path="res://Models/Items/itemIcons/coalIcon.png" id="1_sxirc"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=35 format=3 uid="uid://b4tuc2drf677d"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b4nqm"]
 [ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
@@ -20,8 +20,10 @@
 [ext_resource type="Resource" uid="uid://cak26wqafjw73" path="res://DATA/Items/goldIngot.tres" id="13_p66d7"]
 [ext_resource type="Resource" uid="uid://311aewp742o0" path="res://DATA/Items/torch.tres" id="14_uerq5"]
 [ext_resource type="Resource" uid="uid://dax7xojrmkg5c" path="res://DATA/Items/Thatch.tres" id="15_3yvyn"]
+[ext_resource type="Resource" uid="uid://b4hlcywe2xlre" path="res://DATA/Items/ironOre.tres" id="16_8n01k"]
 [ext_resource type="Resource" uid="uid://8xicv6bkknbs" path="res://DATA/Items/grimSword.tres" id="17_2susn"]
 [ext_resource type="PackedScene" uid="uid://bu355ql2jylkn" path="res://Objects/torch.tscn" id="20_3kdpf"]
+[ext_resource type="PackedScene" uid="uid://hji1ecdemaej" path="res://Scripts/Crafting/craftingDialogue/craftingDialogue.tscn" id="23_ajjb6"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c803k"]
 
@@ -346,16 +348,32 @@ metadata/_edit_group_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.318846, -8.53557)
 item = ExtResource("8_57hkx")
 
+[node name="Pickup7" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.56334, 0.318846, -8.53557)
+item = ExtResource("8_57hkx")
+
 [node name="Pickup4" parent="Ground" instance=ExtResource("9_wuo84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.318846, -7.09581)
+item = ExtResource("8_ab2u8")
+
+[node name="Pickup12" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.58301, 0.318846, -7.09581)
 item = ExtResource("8_ab2u8")
 
 [node name="Pickup2" parent="Ground" instance=ExtResource("9_wuo84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.327797, -9.75672)
 item = ExtResource("9_we53u")
 
+[node name="Pickup13" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.65392, 0.327797, -9.75672)
+item = ExtResource("9_we53u")
+
 [node name="Pickup3" parent="Ground" instance=ExtResource("9_wuo84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.368233, -11.2429)
+item = ExtResource("10_46vl1")
+
+[node name="Pickup14" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.59831, 0.368233, -11.2429)
 item = ExtResource("10_46vl1")
 
 [node name="Pickup5" parent="Ground" instance=ExtResource("9_wuo84")]
@@ -377,6 +395,10 @@ item = ExtResource("14_uerq5")
 [node name="Pickup10" parent="Ground" instance=ExtResource("9_wuo84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2566, 0.368233, -7.12902)
 item = ExtResource("15_3yvyn")
+
+[node name="Pickup11" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2566, 0.368233, -8.43729)
+item = ExtResource("16_8n01k")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.627)
@@ -403,21 +425,21 @@ item = ExtResource("17_2susn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.316548, -2.4487)
 item = ExtResource("11_6dxec")
 
-[node name="Inventory" type="CanvasLayer" parent="."]
+[node name="ui" type="CanvasLayer" parent="."]
 script = ExtResource("11_dq4a8")
 
-[node name="InventoryDialogue" parent="Inventory" instance=ExtResource("12_2xdqo")]
+[node name="InventoryDialogue" parent="ui" instance=ExtResource("12_2xdqo")]
 unique_name_in_owner = true
 visible = false
 
-[node name="Crosshair" type="Control" parent="Inventory"]
+[node name="Crosshair" type="Control" parent="ui"]
 unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Inventory/Crosshair"]
+[node name="TextureRect" type="TextureRect" parent="ui/Crosshair"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = -32.0
@@ -426,5 +448,12 @@ offset_right = 32.0
 offset_bottom = 32.0
 texture = ExtResource("8_l5xxe")
 
+[node name="CraftingDialogue" parent="ui" instance=ExtResource("23_ajjb6")]
+unique_name_in_owner = true
+visible = false
+
 [node name="Torch" parent="." instance=ExtResource("20_3kdpf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4054, 0, -18.6496)
+
+[node name="Torch2" parent="." instance=ExtResource("20_3kdpf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95022, 0, -18.6496)

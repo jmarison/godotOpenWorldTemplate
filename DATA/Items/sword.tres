@@ -1,11 +1,12 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://binpddblg6j6q"]
 
-[ext_resource type="Script" path="res://DATA/Items/Item.gd" id="1_fahce"]
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_fahce"]
 [ext_resource type="Texture2D" uid="uid://deent7wuubknv" path="res://Models/Items/itemIcons/stoneSwordIcon.png" id="1_v5dvr"]
 [ext_resource type="PackedScene" uid="uid://bce2ynrxudksu" path="res://Models/Swords/stoneSword/stoneSword.glb" id="2_nq8me"]
 
 [resource]
 script = ExtResource("1_fahce")
-name = "sword"
+name = "Stone Sword
+"
 scene = ExtResource("2_nq8me")
 icon = ExtResource("1_v5dvr")

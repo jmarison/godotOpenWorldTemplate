@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://c468xdka4f6wj"]
+
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_fwgia"]
+[ext_resource type="Script" path="res://Scripts/Crafting/recipe.gd" id="2_2klbd"]
+[ext_resource type="Resource" uid="uid://qetx4trmp1ki" path="res://DATA/Items/sticks.tres" id="2_usk67"]
+[ext_resource type="Resource" uid="uid://dwthdb76inmpu" path="res://DATA/Items/coal.tres" id="3_4u4rd"]
+[ext_resource type="Resource" uid="uid://311aewp742o0" path="res://DATA/Items/torch.tres" id="4_u2887"]
+
+[resource]
+script = ExtResource("2_2klbd")
+name = "Torch"
+ingredients = Array[ExtResource("1_fwgia")]([ExtResource("2_usk67"), ExtResource("3_4u4rd"), ExtResource("3_4u4rd")])
+results = Array[ExtResource("1_fwgia")]([ExtResource("4_u2887"), ExtResource("4_u2887"), ExtResource("4_u2887"), ExtResource("4_u2887"), ExtResource("4_u2887"), ExtResource("4_u2887"), ExtResource("4_u2887")])

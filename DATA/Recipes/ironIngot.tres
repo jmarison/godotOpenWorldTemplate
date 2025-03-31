@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://bo86306iug4n3"]
+
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_77v77"]
+[ext_resource type="Resource" uid="uid://b4hlcywe2xlre" path="res://DATA/Items/ironOre.tres" id="2_41qxv"]
+[ext_resource type="Script" path="res://Scripts/Crafting/recipe.gd" id="2_eyjan"]
+[ext_resource type="Resource" uid="uid://dwthdb76inmpu" path="res://DATA/Items/coal.tres" id="3_n6x0b"]
+[ext_resource type="Resource" uid="uid://c5nunpb23uw65" path="res://DATA/Items/ironIngot.tres" id="4_3crok"]
+
+[resource]
+script = ExtResource("2_eyjan")
+name = "Iron Ingot"
+ingredients = Array[ExtResource("1_77v77")]([ExtResource("2_41qxv"), ExtResource("2_41qxv"), ExtResource("2_41qxv"), ExtResource("3_n6x0b")])
+results = Array[ExtResource("1_77v77")]([ExtResource("4_3crok"), ExtResource("4_3crok"), ExtResource("4_3crok")])
