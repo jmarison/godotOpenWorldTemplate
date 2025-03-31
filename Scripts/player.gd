@@ -25,11 +25,12 @@ var look_dir: Vector2
 @onready var endLOS = $Head/Camera3D/AimRayEnd
 
 var bullet_trail = load("res://Objects/bullet_trail.tscn")
-
+var locked = false
 
 
 	
 func _physics_process(delta):
+	
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	
@@ -81,8 +82,13 @@ func _input(event: InputEvent):
 func _rotate_camera(delta: float, sens_mod: float = 1.0):
 	var input = Input.get_vector("ui_left", "ui_right","ui_down", "ui_up")
 	look_dir += input
-	rotation.y -= look_dir.x * camera_sens * delta
-	camera.rotation.x = clamp(camera.rotation.x - look_dir.y * camera_sens * sens_mod * delta, -1.5, 1.5)
+	if(locked):
+		rotation.y -= look_dir.x * camera_sens * delta
+		camera.rotation.x = clamp(camera.rotation.x - look_dir.y * camera_sens * sens_mod * delta, -1.5, 1.5)
+	else:
+		rotation.y = 0
+		camera.rotation.x = 0
+	
 	look_dir = Vector2.ZERO
 	shotgun.rotation.y = 3.14159 
 
@@ -112,3 +118,8 @@ func _shoot():
 
 func on_item_picked_up(item:Item):
 	inventory.add_item(item)
+
+
+func _on_crosshair_visibility_changed() -> void:
+	locked = !locked
+	

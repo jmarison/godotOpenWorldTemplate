@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://df5f4iqaq1ydj"]
+
+[ext_resource type="Texture2D" uid="uid://wawfytqq7hyj" path="res://Models/Items/itemIcons/mushroomIcon.png" id="1_iwu4b"]
+[ext_resource type="PackedScene" uid="uid://dnlhj2g6wmg2u" path="res://Models/Items/mushroom.glb" id="1_rv02q"]
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_x1hjr"]
+
+[resource]
+script = ExtResource("1_x1hjr")
+name = "Mushroom"
+scene = ExtResource("1_rv02q")
+icon = ExtResource("1_iwu4b")

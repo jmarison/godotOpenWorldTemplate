@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=37 format=3 uid="uid://b4tuc2drf677d"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b4nqm"]
 [ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
@@ -20,7 +20,9 @@
 [ext_resource type="Resource" uid="uid://cak26wqafjw73" path="res://DATA/Items/goldIngot.tres" id="13_p66d7"]
 [ext_resource type="Resource" uid="uid://311aewp742o0" path="res://DATA/Items/torch.tres" id="14_uerq5"]
 [ext_resource type="Resource" uid="uid://dax7xojrmkg5c" path="res://DATA/Items/Thatch.tres" id="15_3yvyn"]
+[ext_resource type="Resource" uid="uid://df5f4iqaq1ydj" path="res://DATA/Items/mushroom.tres" id="15_wbsa2"]
 [ext_resource type="Resource" uid="uid://b4hlcywe2xlre" path="res://DATA/Items/ironOre.tres" id="16_8n01k"]
+[ext_resource type="Resource" uid="uid://c3wvgldr2dt01" path="res://DATA/Items/magicMushroom.tres" id="16_bqst2"]
 [ext_resource type="Resource" uid="uid://8xicv6bkknbs" path="res://DATA/Items/grimSword.tres" id="17_2susn"]
 [ext_resource type="PackedScene" uid="uid://bu355ql2jylkn" path="res://Objects/torch.tscn" id="20_3kdpf"]
 [ext_resource type="PackedScene" uid="uid://hji1ecdemaej" path="res://Scripts/Crafting/craftingDialogue/craftingDialogue.tscn" id="23_ajjb6"]
@@ -392,6 +394,14 @@ item = ExtResource("13_p66d7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -7.06116)
 item = ExtResource("14_uerq5")
 
+[node name="Pickup15" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -2.64169)
+item = ExtResource("15_wbsa2")
+
+[node name="Pickup16" parent="Ground" instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7296, 0.368233, -2.64169)
+item = ExtResource("16_bqst2")
+
 [node name="Pickup10" parent="Ground" instance=ExtResource("9_wuo84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2566, 0.368233, -7.12902)
 item = ExtResource("15_3yvyn")
@@ -457,3 +467,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4054, 0, -18.6496)
 
 [node name="Torch2" parent="." instance=ExtResource("20_3kdpf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95022, 0, -18.6496)
+
+[connection signal="visibility_changed" from="ui/Crosshair" to="Player" method="_on_crosshair_visibility_changed"]
