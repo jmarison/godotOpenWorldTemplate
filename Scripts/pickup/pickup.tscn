@@ -4,7 +4,8 @@
 [ext_resource type="Resource" uid="uid://binpddblg6j6q" path="res://DATA/Items/sword.tres" id="2_6pt1r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yd4e2"]
-height = 1.28341
+radius = 0.604993
+height = 1.20999
 
 [node name="Pickup" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 1.31689, 0)

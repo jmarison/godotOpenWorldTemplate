@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://dbyad45qxgmga"]
+
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_v8afu"]
+[ext_resource type="Resource" uid="uid://ba25fhtyrmck7" path="res://DATA/Items/stone.tres" id="2_llv15"]
+[ext_resource type="Script" path="res://Scripts/Crafting/recipe.gd" id="2_phx64"]
+[ext_resource type="Resource" uid="uid://dax7xojrmkg5c" path="res://DATA/Items/Thatch.tres" id="3_vn8gt"]
+[ext_resource type="Resource" uid="uid://qetx4trmp1ki" path="res://DATA/Items/sticks.tres" id="4_ng6vv"]
+[ext_resource type="Resource" uid="uid://b1m6ckm71yt7v" path="res://DATA/Items/stonePickaxe.tres" id="5_v1lsp"]
+
+[resource]
+script = ExtResource("2_phx64")
+name = "Stone Pickaxe"
+ingredients = Array[ExtResource("1_v8afu")]([ExtResource("2_llv15"), ExtResource("2_llv15"), ExtResource("3_vn8gt"), ExtResource("4_ng6vv")])
+results = Array[ExtResource("1_v8afu")]([ExtResource("5_v1lsp")])

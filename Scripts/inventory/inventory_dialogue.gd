@@ -4,12 +4,18 @@ extends PanelContainer
 @onready var crosshair: Control = %Crosshair
 
 @onready var grid_container: ItemGrid = %GridContainer
+#var amountOfItems = 0
+#var maxItems = 40
+#var blankItems = 0
 
 func open(inventory:Inventory):
 	show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	#amountOfItems = inventory.size()
+	#blankItems = maxItems - amountOfItems
 	
 	grid_container.display(inventory.get_items())
+	
 
 func _on_close_button_pressed() -> void:
 	hide()

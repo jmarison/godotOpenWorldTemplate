@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b1m6ckm71yt7v"]
+
+[ext_resource type="PackedScene" uid="uid://hce1547gtym5" path="res://Models/Items/pickaxe.glb" id="1_dongj"]
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_ow5sc"]
+
+[resource]
+script = ExtResource("1_ow5sc")
+name = "Stone Pickaxe"
+scene = ExtResource("1_dongj")
+maxStack = 1.0

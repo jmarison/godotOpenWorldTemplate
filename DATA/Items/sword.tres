@@ -10,3 +10,4 @@ name = "Stone Sword
 "
 scene = ExtResource("2_nq8me")
 icon = ExtResource("1_v5dvr")
+maxStack = 1.0

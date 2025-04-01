@@ -9,3 +9,4 @@ script = ExtResource("1_3klkr")
 name = "Emerald Sword"
 scene = ExtResource("2_w4wwp")
 icon = ExtResource("1_8f0eh")
+maxStack = 1.0

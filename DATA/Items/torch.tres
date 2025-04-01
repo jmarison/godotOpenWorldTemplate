@@ -9,3 +9,4 @@ script = ExtResource("1_hom4t")
 name = "Torch"
 scene = ExtResource("2_mipio")
 icon = ExtResource("1_xbc2v")
+maxStack = 100.0

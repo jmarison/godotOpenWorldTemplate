@@ -9,3 +9,4 @@ script = ExtResource("1_pykco")
 name = "Grimium Sword"
 scene = ExtResource("2_h2miv")
 icon = ExtResource("1_r5o6w")
+maxStack = 1.0

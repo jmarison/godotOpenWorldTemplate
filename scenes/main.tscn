@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=39 format=3 uid="uid://b4tuc2drf677d"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b4nqm"]
 [ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
@@ -25,6 +25,8 @@
 [ext_resource type="Resource" uid="uid://c3wvgldr2dt01" path="res://DATA/Items/magicMushroom.tres" id="16_bqst2"]
 [ext_resource type="Resource" uid="uid://8xicv6bkknbs" path="res://DATA/Items/grimSword.tres" id="17_2susn"]
 [ext_resource type="PackedScene" uid="uid://bu355ql2jylkn" path="res://Objects/torch.tscn" id="20_3kdpf"]
+[ext_resource type="Resource" uid="uid://fkv7tbmk5v8j" path="res://DATA/Items/axe.tres" id="21_jycll"]
+[ext_resource type="Resource" uid="uid://b1m6ckm71yt7v" path="res://DATA/Items/stonePickaxe.tres" id="22_bapoa"]
 [ext_resource type="PackedScene" uid="uid://hji1ecdemaej" path="res://Scripts/Crafting/craftingDialogue/craftingDialogue.tscn" id="23_ajjb6"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c803k"]
@@ -430,6 +432,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 0)
 [node name="Pickup2" parent="." instance=ExtResource("9_wuo84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 1.09531)
 item = ExtResource("17_2susn")
+
+[node name="Pickup3" parent="." instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 2.52564)
+item = ExtResource("21_jycll")
+
+[node name="Pickup4" parent="." instance=ExtResource("9_wuo84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 3.4379)
+item = ExtResource("22_bapoa")
 
 [node name="eSword" parent="." instance=ExtResource("9_wuo84")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.316548, -2.4487)

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://dpisqqhwvylsh"]
+
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_p0nra"]
+[ext_resource type="Resource" uid="uid://ba25fhtyrmck7" path="res://DATA/Items/stone.tres" id="2_1pxwc"]
+[ext_resource type="Script" path="res://Scripts/Crafting/recipe.gd" id="2_m327l"]
+[ext_resource type="Resource" uid="uid://qetx4trmp1ki" path="res://DATA/Items/sticks.tres" id="3_8cgva"]
+[ext_resource type="Resource" uid="uid://dax7xojrmkg5c" path="res://DATA/Items/Thatch.tres" id="4_guiki"]
+[ext_resource type="Resource" uid="uid://fkv7tbmk5v8j" path="res://DATA/Items/axe.tres" id="5_nhlwr"]
+
+[resource]
+script = ExtResource("2_m327l")
+name = "Stone Axe"
+ingredients = Array[ExtResource("1_p0nra")]([ExtResource("2_1pxwc"), ExtResource("2_1pxwc"), ExtResource("3_8cgva"), ExtResource("4_guiki")])
+results = Array[ExtResource("1_p0nra")]([ExtResource("5_nhlwr")])
