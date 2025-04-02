@@ -1,32 +1,17 @@
-[gd_scene load_steps=39 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=24 format=3 uid="uid://b4tuc2drf677d"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b4nqm"]
 [ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
 [ext_resource type="Material" uid="uid://d3aaqqkw8urv4" path="res://materials/block.tres" id="2_hqlnn"]
 [ext_resource type="PackedScene" uid="uid://d2f3f2bexk30h" path="res://Objects/tree.tscn" id="3_gq4va"]
 [ext_resource type="MeshLibrary" uid="uid://c7ncuruqxlca4" path="res://Tile Maps/blocks.tres" id="5_81feu"]
-[ext_resource type="Resource" uid="uid://ba25fhtyrmck7" path="res://DATA/Items/stone.tres" id="8_57hkx"]
-[ext_resource type="Resource" uid="uid://qetx4trmp1ki" path="res://DATA/Items/sticks.tres" id="8_ab2u8"]
 [ext_resource type="Texture2D" uid="uid://2n7tpttgm8at" path="res://Models/MuzzleFlash/crosshair.png" id="8_l5xxe"]
 [ext_resource type="PackedScene" uid="uid://co3opo20b1sq6" path="res://Objects/zombie.tscn" id="9_cngse"]
-[ext_resource type="Resource" uid="uid://x54vhgssgqrt" path="res://DATA/Items/wood.tres" id="9_we53u"]
-[ext_resource type="PackedScene" uid="uid://ben2e7g2seqhm" path="res://Scripts/pickup/pickup.tscn" id="9_wuo84"]
-[ext_resource type="Resource" uid="uid://dwthdb76inmpu" path="res://DATA/Items/coal.tres" id="10_46vl1"]
-[ext_resource type="Resource" uid="uid://8b30f3xxr7m8" path="res://DATA/Items/swordEmerald.tres" id="11_6dxec"]
 [ext_resource type="Script" path="res://Scripts/uiroot.gd" id="11_dq4a8"]
-[ext_resource type="Resource" uid="uid://c5nunpb23uw65" path="res://DATA/Items/ironIngot.tres" id="11_i21cf"]
 [ext_resource type="PackedScene" uid="uid://dk1ugxvv7c5rw" path="res://Scripts/inventory/inventoryDialogue.tscn" id="12_2xdqo"]
-[ext_resource type="Resource" uid="uid://b0jfdkbhoplxa" path="res://DATA/Items/grimIngot.tres" id="12_08kja"]
-[ext_resource type="Resource" uid="uid://cak26wqafjw73" path="res://DATA/Items/goldIngot.tres" id="13_p66d7"]
-[ext_resource type="Resource" uid="uid://311aewp742o0" path="res://DATA/Items/torch.tres" id="14_uerq5"]
-[ext_resource type="Resource" uid="uid://dax7xojrmkg5c" path="res://DATA/Items/Thatch.tres" id="15_3yvyn"]
-[ext_resource type="Resource" uid="uid://df5f4iqaq1ydj" path="res://DATA/Items/mushroom.tres" id="15_wbsa2"]
-[ext_resource type="Resource" uid="uid://b4hlcywe2xlre" path="res://DATA/Items/ironOre.tres" id="16_8n01k"]
-[ext_resource type="Resource" uid="uid://c3wvgldr2dt01" path="res://DATA/Items/magicMushroom.tres" id="16_bqst2"]
-[ext_resource type="Resource" uid="uid://8xicv6bkknbs" path="res://DATA/Items/grimSword.tres" id="17_2susn"]
+[ext_resource type="PackedScene" uid="uid://beuqhclk2xns1" path="res://Scripts/Destroyables/destroyable.tscn" id="13_5aa6f"]
+[ext_resource type="Resource" uid="uid://dt6icg5hmpisp" path="res://DATA/worldObjects/tree.tres" id="14_a02qs"]
 [ext_resource type="PackedScene" uid="uid://bu355ql2jylkn" path="res://Objects/torch.tscn" id="20_3kdpf"]
-[ext_resource type="Resource" uid="uid://fkv7tbmk5v8j" path="res://DATA/Items/axe.tres" id="21_jycll"]
-[ext_resource type="Resource" uid="uid://b1m6ckm71yt7v" path="res://DATA/Items/stonePickaxe.tres" id="22_bapoa"]
 [ext_resource type="PackedScene" uid="uid://hji1ecdemaej" path="res://Scripts/Crafting/craftingDialogue/craftingDialogue.tscn" id="23_ajjb6"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c803k"]
@@ -324,18 +309,23 @@ material = ExtResource("2_hqlnn")
 
 [node name="Tree" parent="Ground" instance=ExtResource("3_gq4va")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.646908, 1, 15.3754)
+visible = false
 
 [node name="Tree4" parent="Ground" instance=ExtResource("3_gq4va")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 35.3531, 2, -6.6246)
+visible = false
 
 [node name="Tree5" parent="Ground" instance=ExtResource("3_gq4va")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 35.3531, 2, -0.624598)
+visible = false
 
 [node name="Tree2" parent="Ground" instance=ExtResource("3_gq4va")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, 9)
+visible = false
 
 [node name="Tree3" parent="Ground" instance=ExtResource("3_gq4va")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -17.0209, 0, 9)
+visible = false
 
 [node name="GridMap" type="GridMap" parent="Ground"]
 mesh_library = ExtResource("5_81feu")
@@ -347,70 +337,6 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 metadata/_edit_group_ = true
-
-[node name="Pickup" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.318846, -8.53557)
-item = ExtResource("8_57hkx")
-
-[node name="Pickup7" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.56334, 0.318846, -8.53557)
-item = ExtResource("8_57hkx")
-
-[node name="Pickup4" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.318846, -7.09581)
-item = ExtResource("8_ab2u8")
-
-[node name="Pickup12" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.58301, 0.318846, -7.09581)
-item = ExtResource("8_ab2u8")
-
-[node name="Pickup2" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.327797, -9.75672)
-item = ExtResource("9_we53u")
-
-[node name="Pickup13" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.65392, 0.327797, -9.75672)
-item = ExtResource("9_we53u")
-
-[node name="Pickup3" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.368233, -11.2429)
-item = ExtResource("10_46vl1")
-
-[node name="Pickup14" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.59831, 0.368233, -11.2429)
-item = ExtResource("10_46vl1")
-
-[node name="Pickup5" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -11.2429)
-item = ExtResource("11_i21cf")
-
-[node name="Pickup6" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -9.69337)
-item = ExtResource("12_08kja")
-
-[node name="Pickup8" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -8.29812)
-item = ExtResource("13_p66d7")
-
-[node name="Pickup9" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -7.06116)
-item = ExtResource("14_uerq5")
-
-[node name="Pickup15" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4655, 0.368233, -2.64169)
-item = ExtResource("15_wbsa2")
-
-[node name="Pickup16" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7296, 0.368233, -2.64169)
-item = ExtResource("16_bqst2")
-
-[node name="Pickup10" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2566, 0.368233, -7.12902)
-item = ExtResource("15_3yvyn")
-
-[node name="Pickup11" parent="Ground" instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2566, 0.368233, -8.43729)
-item = ExtResource("16_8n01k")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.627)
@@ -426,26 +352,8 @@ mesh = SubResource("CylinderMesh_yex4j")
 [node name="Zombie" parent="." instance=ExtResource("9_cngse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.62366)
 
-[node name="Pickup" parent="." instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 0)
-
-[node name="Pickup2" parent="." instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 1.09531)
-item = ExtResource("17_2susn")
-
-[node name="Pickup3" parent="." instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 2.52564)
-item = ExtResource("21_jycll")
-
-[node name="Pickup4" parent="." instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.311882, 3.4379)
-item = ExtResource("22_bapoa")
-
-[node name="eSword" parent="." instance=ExtResource("9_wuo84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 0.316548, -2.4487)
-item = ExtResource("11_6dxec")
-
 [node name="ui" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
 script = ExtResource("11_dq4a8")
 
 [node name="InventoryDialogue" parent="ui" instance=ExtResource("12_2xdqo")]
@@ -477,5 +385,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4054, 0, -18.6496)
 
 [node name="Torch2" parent="." instance=ExtResource("20_3kdpf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95022, 0, -18.6496)
+
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="Destroyable" parent="Objects" instance=ExtResource("13_5aa6f")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.605, 0, 0)
+obj = ExtResource("14_a02qs")
 
 [connection signal="visibility_changed" from="ui/Crosshair" to="Player" method="_on_crosshair_visibility_changed"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="worldObject" load_steps=6 format=3 uid="uid://dt6icg5hmpisp"]
+
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="1_t1uf6"]
+[ext_resource type="Resource" uid="uid://x54vhgssgqrt" path="res://DATA/Items/wood.tres" id="2_06hd1"]
+[ext_resource type="Resource" uid="uid://qetx4trmp1ki" path="res://DATA/Items/sticks.tres" id="3_cpmu5"]
+[ext_resource type="Script" path="res://Scripts/Destroyables/worldObject.gd" id="3_jgvdu"]
+[ext_resource type="PackedScene" uid="uid://18xc42x7mxk5" path="res://Models/tree.glb" id="4_aiapg"]
+
+[resource]
+script = ExtResource("3_jgvdu")
+name = "Tree"
+scene = ExtResource("4_aiapg")
+hp = 100
+tier = 0
+droppedItems = Array[ExtResource("1_t1uf6")]([ExtResource("2_06hd1"), ExtResource("2_06hd1"), ExtResource("2_06hd1"), ExtResource("2_06hd1"), ExtResource("2_06hd1"), ExtResource("3_cpmu5"), ExtResource("3_cpmu5")])

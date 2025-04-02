@@ -29,12 +29,15 @@ layout_mode = 2
 [node name="TitleLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 1
 text = "Inventory"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CloseButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
-text = "CLOSE"
+text = "Close"
 
 [node name="GridContainer" parent="VBoxContainer" instance=ExtResource("3_3rxyt")]
 unique_name_in_owner = true

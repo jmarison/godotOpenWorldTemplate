@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://c3wvgldr2dt01"]
 
-[ext_resource type="Texture2D" uid="uid://8vcyl5npt7ir" path="res://Models/Items/itemIcons/magicMushroomIcon.png" id="1_67nm4"]
-[ext_resource type="PackedScene" uid="uid://cccsvrrwblkb6" path="res://Models/Items/magicMushroom.glb" id="1_fwtvc"]
+[ext_resource type="Texture2D" uid="uid://8vcyl5npt7ir" path="res://Items/itemIcons/magicMushroomIcon.png" id="1_67nm4"]
+[ext_resource type="PackedScene" uid="uid://cccsvrrwblkb6" path="res://Items/magicMushroom.glb" id="1_fwtvc"]
 [ext_resource type="Script" path="res://Scripts/Item.gd" id="1_k1mo0"]
 
 [resource]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ben2e7g2seqhm"]
+[gd_scene load_steps=3 format=3 uid="uid://ben2e7g2seqhm"]
 
 [ext_resource type="Script" path="res://Scripts/pickup/pickup.gd" id="1_vuei2"]
-[ext_resource type="Resource" uid="uid://binpddblg6j6q" path="res://DATA/Items/sword.tres" id="2_6pt1r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yd4e2"]
 radius = 0.604993
@@ -10,7 +9,6 @@ height = 1.20999
 [node name="Pickup" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65865, 1.31689, 0)
 script = ExtResource("1_vuei2")
-item = ExtResource("2_6pt1r")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(0.261306, 0, 0, 0, 0.814509, 0, 0, 0, 0.339617, 0, 0.517491, 0)

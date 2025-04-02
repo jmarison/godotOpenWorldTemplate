@@ -1,6 +1,6 @@
 extends Node3D
-
 @export var item:Item
+
 var time : float = 0.0  
 var speed = 2.0
 var amplitude : float = 0.00075

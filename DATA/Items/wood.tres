@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://x54vhgssgqrt"]
 
 [ext_resource type="Script" path="res://Scripts/Item.gd" id="1_041mo"]
-[ext_resource type="Texture2D" uid="uid://dkhrmfsybq0yy" path="res://Models/Items/itemIcons/woodIcon.png" id="1_pxly3"]
-[ext_resource type="PackedScene" uid="uid://dae1tie25sgdx" path="res://Models/Items/wood.glb" id="2_d35wr"]
+[ext_resource type="Texture2D" uid="uid://dkhrmfsybq0yy" path="res://Items/itemIcons/woodIcon.png" id="1_pxly3"]
+[ext_resource type="PackedScene" uid="uid://dae1tie25sgdx" path="res://Items/wood.glb" id="2_d35wr"]
 
 [resource]
 script = ExtResource("1_041mo")

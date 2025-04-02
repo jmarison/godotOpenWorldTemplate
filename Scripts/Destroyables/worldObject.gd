@@ -1,0 +1,13 @@
+class_name worldObject
+extends Resource
+
+
+@export var name: String = "unknown"
+@export var scene: PackedScene = preload("res://Models/noModel.glb") 
+@export var hp = 100
+	#this is tier of strength required to harvest the material 
+	#EX in minecraft you need iron tier to mine diamond and terraria you need pallidium/cobalt to mine mythril/orichalcum
+@export var tier = 0
+@export var droppedItems:Array[Item] = []
+
+ 
