@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://beuqhclk2xns1"]
+[gd_scene load_steps=4 format=3 uid="uid://beuqhclk2xns1"]
 
 [ext_resource type="Script" path="res://Scripts/Destroyables/destroyable.gd" id="1_alc5s"]
+[ext_resource type="Script" path="res://Scripts/Destroyables/idk.gd" id="2_fc1rk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cy46l"]
 size = Vector3(2.35843, 4.20203, 2.20752)
@@ -9,7 +10,10 @@ size = Vector3(2.35843, 4.20203, 2.20752)
 script = ExtResource("1_alc5s")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("2_fc1rk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.202135, 1.59239, -0.3476)
 shape = SubResource("BoxShape3D_cy46l")
+
+[connection signal="takeDamage" from="StaticBody3D" to="." method="_on_static_body_3d_take_damage"]

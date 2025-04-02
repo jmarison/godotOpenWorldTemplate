@@ -9,7 +9,7 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oigxk"]
 material = ExtResource("2_1rnv4")
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["destroyable"]]
 script = ExtResource("1_8rkjh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -39,6 +39,9 @@ collide_with_areas = true
 [node name="AimRayEnd" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100.633)
 visible = false
+
+[node name="playerReach" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -5)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_energy = 0.628

@@ -4,7 +4,7 @@ extends PanelContainer
 @onready var crosshair: Control = %Crosshair
 
 @onready var grid_container: ItemGrid = %GridContainer
-@onready var hot_bar: PanelContainer = %HotBar
+
 
 #var amountOfItems = 0
 #var maxItems = 40

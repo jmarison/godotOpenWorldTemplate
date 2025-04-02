@@ -10,6 +10,7 @@ var capMouse = false
 var gravity = 18.0
 var rng = RandomNumberGenerator.new()
 var inventory:Inventory = Inventory.new()
+var damage = 20
 
 
 
@@ -24,11 +25,14 @@ var look_dir: Vector2
 @onready var LOS = $Head/Camera3D/AimRay
 @onready var endLOS = $Head/Camera3D/AimRayEnd
 
+#PLAYER REACH FOR MINING/INTERACTING
+@onready var player_reach: RayCast3D = $Head/Camera3D/playerReach
+
+
 var bullet_trail = load("res://Objects/bullet_trail.tscn")
 var locked = false
 
 
-	
 func _physics_process(delta):
 	
 	if not is_on_floor():
@@ -61,8 +65,9 @@ func _physics_process(delta):
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			
 	if Input.is_action_just_pressed("lmb"):
-		_shoot()
+		_lmb()
 		
 		
 	#head bob
@@ -123,3 +128,9 @@ func on_item_picked_up(item:Item):
 func _on_crosshair_visibility_changed() -> void:
 	locked = !locked
 	
+
+func _lmb():
+	if player_reach.is_colliding():
+		if player_reach.get_collider().has_method("sendSignal"):
+			player_reach.get_collider().sendSignal()
+			print(damage)
