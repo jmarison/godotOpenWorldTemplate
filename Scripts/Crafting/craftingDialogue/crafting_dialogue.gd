@@ -9,6 +9,7 @@ extends PanelContainer
 @onready var grid_container: GridContainer = %GridContainer
 @onready var craft_button: Button = %CraftButton
 
+
 var playerInventory:Inventory
 var _selected_recipe:Recipe
 
@@ -24,7 +25,8 @@ func open(recipes: Array[Recipe], inventory:Inventory):
 	recipe_list.select(0)
 	_on_recipe_list_item_selected(0)
 	
-	
+
+
 func _on_recipe_list_item_selected(index: int):
 	_selected_recipe = recipe_list.get_item_metadata(index)
 	ingredients_container.display(_selected_recipe.ingredients)

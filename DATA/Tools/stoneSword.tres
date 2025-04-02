@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Tool" load_steps=3 format=3 uid="uid://b2hhpy5nctymp"]
+
+[ext_resource type="Script" path="res://Scripts/Tools/tools.gd" id="1_6loj5"]
+[ext_resource type="Resource" uid="uid://binpddblg6j6q" path="res://DATA/Items/sword.tres" id="1_65f3j"]
+
+[resource]
+script = ExtResource("1_6loj5")
+name = "Stone Sword"
+item = ExtResource("1_65f3j")
+toolType = 3
+tier = 2
+durability = 250

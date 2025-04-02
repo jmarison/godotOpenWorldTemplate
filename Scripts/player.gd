@@ -86,8 +86,8 @@ func _rotate_camera(delta: float, sens_mod: float = 1.0):
 		rotation.y -= look_dir.x * camera_sens * delta
 		camera.rotation.x = clamp(camera.rotation.x - look_dir.y * camera_sens * sens_mod * delta, -1.5, 1.5)
 	else:
-		rotation.y = 0
-		camera.rotation.x = 0
+		rotation.y = rotation.y
+		camera.rotation.x = camera.rotation.x
 	
 	look_dir = Vector2.ZERO
 	shotgun.rotation.y = 3.14159 

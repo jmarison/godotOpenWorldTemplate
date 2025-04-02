@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=26 format=3 uid="uid://b4tuc2drf677d"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b4nqm"]
 [ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://dk1ugxvv7c5rw" path="res://Scripts/inventory/inventoryDialogue.tscn" id="12_2xdqo"]
 [ext_resource type="PackedScene" uid="uid://beuqhclk2xns1" path="res://Scripts/Destroyables/destroyable.tscn" id="13_5aa6f"]
 [ext_resource type="Resource" uid="uid://dt6icg5hmpisp" path="res://DATA/worldObjects/tree.tres" id="14_a02qs"]
+[ext_resource type="PackedScene" uid="uid://ben2e7g2seqhm" path="res://Scripts/pickup/pickup.tscn" id="15_16os2"]
+[ext_resource type="Resource" uid="uid://dwthdb76inmpu" path="res://DATA/Items/coal.tres" id="16_yjhiu"]
 [ext_resource type="PackedScene" uid="uid://bu355ql2jylkn" path="res://Objects/torch.tscn" id="20_3kdpf"]
 [ext_resource type="PackedScene" uid="uid://hji1ecdemaej" path="res://Scripts/Crafting/craftingDialogue/craftingDialogue.tscn" id="23_ajjb6"]
 
@@ -352,6 +354,60 @@ mesh = SubResource("CylinderMesh_yex4j")
 [node name="Zombie" parent="." instance=ExtResource("9_cngse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.62366)
 
+[node name="Torch" parent="." instance=ExtResource("20_3kdpf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4054, 0, -18.6496)
+
+[node name="Torch2" parent="." instance=ExtResource("20_3kdpf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95022, 0, -18.6496)
+
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="Destroyable" parent="Objects" instance=ExtResource("13_5aa6f")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.605, 0, 0)
+obj = ExtResource("14_a02qs")
+
+[node name="pickups" type="Node3D" parent="."]
+
+[node name="Pickup" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 0)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup2" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 0.808661)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup3" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 1.6639)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup4" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 2.46537)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup5" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 3.53211)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup6" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 4.41394)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup7" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 5.31622)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup8" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 6.1969)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup9" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 7.14505)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup10" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 8.5855)
+item = ExtResource("16_yjhiu")
+
 [node name="ui" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 script = ExtResource("11_dq4a8")
@@ -379,17 +435,5 @@ texture = ExtResource("8_l5xxe")
 [node name="CraftingDialogue" parent="ui" instance=ExtResource("23_ajjb6")]
 unique_name_in_owner = true
 visible = false
-
-[node name="Torch" parent="." instance=ExtResource("20_3kdpf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4054, 0, -18.6496)
-
-[node name="Torch2" parent="." instance=ExtResource("20_3kdpf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95022, 0, -18.6496)
-
-[node name="Objects" type="Node3D" parent="."]
-
-[node name="Destroyable" parent="Objects" instance=ExtResource("13_5aa6f")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.605, 0, 0)
-obj = ExtResource("14_a02qs")
 
 [connection signal="visibility_changed" from="ui/Crosshair" to="Player" method="_on_crosshair_visibility_changed"]

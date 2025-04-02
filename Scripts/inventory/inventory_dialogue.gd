@@ -4,6 +4,8 @@ extends PanelContainer
 @onready var crosshair: Control = %Crosshair
 
 @onready var grid_container: ItemGrid = %GridContainer
+@onready var hot_bar: PanelContainer = %HotBar
+
 #var amountOfItems = 0
 #var maxItems = 40
 #var blankItems = 0
@@ -15,6 +17,8 @@ func open(inventory:Inventory):
 	#blankItems = maxItems - amountOfItems
 	
 	grid_container.display(inventory.get_items())
+	
+	
 	
 
 func _on_close_button_pressed() -> void:

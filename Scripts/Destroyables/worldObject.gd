@@ -9,5 +9,7 @@ extends Resource
 	#EX in minecraft you need iron tier to mine diamond and terraria you need pallidium/cobalt to mine mythril/orichalcum
 @export var tier = 0
 @export var droppedItems:Array[Item] = []
+#0 = hand, 1 pickaxe, 2 shovel, 3 axe and so on
+#export var tooltype = 0
 
  
