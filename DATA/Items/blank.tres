@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bqptainumw5w4"]
+
+[ext_resource type="Texture2D" uid="uid://cv1g2bku550px" path="res://Items/itemIcons/blankIcon.png" id="1_30vae"]
+[ext_resource type="PackedScene" uid="uid://bjxdwqjy1s3xl" path="res://Models/noModel.glb" id="2_ijuyo"]
+[ext_resource type="Script" path="res://Scripts/Item.gd" id="3_n2eqi"]
+
+[resource]
+script = ExtResource("3_n2eqi")
+name = "unknown item"
+scene = ExtResource("2_ijuyo")
+icon = ExtResource("1_30vae")
+maxStack = 50

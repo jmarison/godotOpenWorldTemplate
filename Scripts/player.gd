@@ -27,12 +27,16 @@ var look_dir: Vector2
 
 #PLAYER REACH FOR MINING/INTERACTING
 @onready var player_reach: RayCast3D = $Head/Camera3D/playerReach
-
+@onready var hotbar: GridContainer = $Hotbar
 
 var bullet_trail = load("res://Objects/bullet_trail.tscn")
 var locked = false
 
-
+func _ready():
+	#hotbar.display(inventory.get_items())
+	pass
+	
+	
 func _physics_process(delta):
 	
 	if not is_on_floor():
@@ -68,7 +72,8 @@ func _physics_process(delta):
 			
 	if Input.is_action_just_pressed("lmb"):
 		_lmb()
-		
+	if Input.is_action_just_pressed("test"):
+		hotbar.display(inventory.get_items())
 		
 	#head bob
 	t_bob += delta * velocity.length() * float(is_on_floor())

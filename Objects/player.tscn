@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bd07lgriiu5bt"]
+[gd_scene load_steps=8 format=3 uid="uid://bd07lgriiu5bt"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_8rkjh"]
 [ext_resource type="Material" uid="uid://d3aaqqkw8urv4" path="res://materials/block.tres" id="2_1rnv4"]
 [ext_resource type="PackedScene" uid="uid://drumm5isdd8hs" path="res://Objects/shotgun.tscn" id="3_dw4bu"]
+[ext_resource type="Script" path="res://Scripts/hotbar.gd" id="4_svwuo"]
+[ext_resource type="PackedScene" uid="uid://b084j5ynudocn" path="res://Scripts/inventory/item_slot.tscn" id="5_q26ug"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_itarw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oigxk"]
 material = ExtResource("2_1rnv4")
 
-[node name="Player" type="CharacterBody3D" groups=["destroyable"]]
+[node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_8rkjh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -41,7 +43,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -100.633)
 visible = false
 
 [node name="playerReach" type="RayCast3D" parent="Head/Camera3D"]
-target_position = Vector3(0, 0, -5)
+target_position = Vector3(0, 0, -4)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_energy = 0.628
+
+[node name="Hotbar" type="GridContainer" parent="."]
+layout_direction = 2
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.0362, 0.963078)
+columns = 10
+script = ExtResource("4_svwuo")
+slot_scene = ExtResource("5_q26ug")

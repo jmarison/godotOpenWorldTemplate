@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b4tuc2drf677d"]
+[gd_scene load_steps=27 format=3 uid="uid://b4tuc2drf677d"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_b4nqm"]
 [ext_resource type="PackedScene" uid="uid://bd07lgriiu5bt" path="res://Objects/player.tscn" id="1_q24fy"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://2n7tpttgm8at" path="res://Models/MuzzleFlash/crosshair.png" id="8_l5xxe"]
 [ext_resource type="PackedScene" uid="uid://co3opo20b1sq6" path="res://Objects/zombie.tscn" id="9_cngse"]
 [ext_resource type="Script" path="res://Scripts/uiroot.gd" id="11_dq4a8"]
+[ext_resource type="Resource" uid="uid://cak26wqafjw73" path="res://DATA/Items/goldIngot.tres" id="12_1rkxq"]
 [ext_resource type="PackedScene" uid="uid://dk1ugxvv7c5rw" path="res://Scripts/inventory/inventoryDialogue.tscn" id="12_2xdqo"]
 [ext_resource type="PackedScene" uid="uid://beuqhclk2xns1" path="res://Scripts/Destroyables/destroyable.tscn" id="13_5aa6f"]
 [ext_resource type="Resource" uid="uid://dt6icg5hmpisp" path="res://DATA/worldObjects/tree.tres" id="14_a02qs"]
@@ -394,20 +395,44 @@ item = ExtResource("16_yjhiu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 4.41394)
 item = ExtResource("16_yjhiu")
 
+[node name="Pickup16" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7274, -0.0398344, 4.41394)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup11" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2214, -0.0398344, 4.41394)
+item = ExtResource("12_1rkxq")
+
 [node name="Pickup7" parent="pickups" instance=ExtResource("15_16os2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 5.31622)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup15" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3141, -0.0398344, 5.31622)
 item = ExtResource("16_yjhiu")
 
 [node name="Pickup8" parent="pickups" instance=ExtResource("15_16os2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 6.1969)
 item = ExtResource("16_yjhiu")
 
+[node name="Pickup14" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.4683, -0.0398344, 6.1969)
+item = ExtResource("16_yjhiu")
+
 [node name="Pickup9" parent="pickups" instance=ExtResource("15_16os2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 7.14505)
 item = ExtResource("16_yjhiu")
 
+[node name="Pickup13" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2812, -0.0398344, 7.14505)
+item = ExtResource("16_yjhiu")
+
 [node name="Pickup10" parent="pickups" instance=ExtResource("15_16os2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1869, -0.0398344, 8.5855)
+item = ExtResource("16_yjhiu")
+
+[node name="Pickup12" parent="pickups" instance=ExtResource("15_16os2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3957, -0.0398344, 8.5855)
 item = ExtResource("16_yjhiu")
 
 [node name="ui" type="CanvasLayer" parent="."]
