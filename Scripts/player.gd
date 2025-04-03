@@ -27,14 +27,16 @@ var look_dir: Vector2
 
 #PLAYER REACH FOR MINING/INTERACTING
 @onready var player_reach: RayCast3D = $Head/Camera3D/playerReach
-@onready var hotbar: GridContainer = $Hotbar
+@onready var hotbar: GridContainer = %Hotbar
+@onready var inventory_dialogue: InventoryDialog = %InventoryDialogue
+
 
 var bullet_trail = load("res://Objects/bullet_trail.tscn")
 var locked = false
 
 func _ready():
-	#hotbar.display(inventory.get_items())
-	pass
+	inventory.connect("inventory_updated", _update_inventory)
+	_update_hotbar()
 	
 	
 func _physics_process(delta):
@@ -72,8 +74,6 @@ func _physics_process(delta):
 			
 	if Input.is_action_just_pressed("lmb"):
 		_lmb()
-	if Input.is_action_just_pressed("test"):
-		hotbar.display(inventory.get_items())
 		
 	#head bob
 	t_bob += delta * velocity.length() * float(is_on_floor())
@@ -128,11 +128,20 @@ func _shoot():
 
 func on_item_picked_up(item:Item):
 	inventory.add_item(item)
+	_update_hotbar()
+	_update_inventory()
 
+func _update_hotbar():
+	hotbar.showHotbar(inventory.get_items())
+	
+	
+func _update_inventory():
+	inventory_dialogue.grid_container.display(inventory.get_items())
+	_update_hotbar()
 
 func _on_crosshair_visibility_changed() -> void:
 	locked = !locked
-	
+
 
 func _lmb():
 	if player_reach.is_colliding():

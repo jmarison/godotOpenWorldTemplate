@@ -49,18 +49,18 @@ target_position = Vector3(0, 0, -4)
 light_energy = 0.628
 
 [node name="Hotbar" type="GridContainer" parent="."]
-layout_direction = 2
+unique_name_in_owner = true
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -80.0
-offset_top = -40.0
-offset_right = 80.0
+offset_top = -10.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(1.0362, 0.963078)
+size_flags_horizontal = 4
+size_flags_vertical = 8
 columns = 10
 script = ExtResource("4_svwuo")
 slot_scene = ExtResource("5_q26ug")

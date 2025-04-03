@@ -6,7 +6,7 @@ signal inventory_updated
 
 func add_item(item:Item):
 	_content.append(item)
-	inventory_updated.emit()
+	emit_signal("inventory_updated")
 
 func remove_item(item:Item):
 	_content.erase(item)

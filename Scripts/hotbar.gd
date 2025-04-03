@@ -1,9 +1,10 @@
+
 extends GridContainer
 
 @export var slot_scene:PackedScene
 var blankItem:Item = preload("res://DATA/Items/blank.tres")
 
-func display(items:Array[Item]):
+func showHotbar(items:Array[Item]):
 	
 	for child in get_children():
 		child.queue_free()
