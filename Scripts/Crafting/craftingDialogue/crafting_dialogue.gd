@@ -29,8 +29,8 @@ func open(recipes: Array[Recipe], inventory:Inventory):
 
 func _on_recipe_list_item_selected(index: int):
 	_selected_recipe = recipe_list.get_item_metadata(index)
-	ingredients_container.display(_selected_recipe.ingredients)
-	results_container.display(_selected_recipe.results)
+	ingredients_container.craftingdisplay(_selected_recipe.ingredients)
+	results_container.craftingdisplay(_selected_recipe.results)
 	
 	craft_button.disabled = not playerInventory.has_all(_selected_recipe.ingredients)
 	
