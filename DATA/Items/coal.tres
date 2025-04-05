@@ -9,3 +9,5 @@ script = ExtResource("1_anp0w")
 name = "Coal"
 scene = ExtResource("1_q0hr3")
 icon = ExtResource("1_sxirc")
+maxStack = 10.0
+count = 1

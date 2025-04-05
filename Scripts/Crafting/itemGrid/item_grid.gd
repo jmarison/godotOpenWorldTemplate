@@ -11,7 +11,7 @@ func craftingdisplay(items:Array[Item]):
 	for item in items:
 		var slot = slot_scene.instantiate()
 		add_child(slot)
-		slot.display(item)
+		slot.craftingDisplay(item)
 
 func display(items:Array[Item]):
 	var num_slots = 60

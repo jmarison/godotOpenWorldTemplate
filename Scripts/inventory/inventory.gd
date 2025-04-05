@@ -2,15 +2,20 @@ class_name Inventory
 
 var _content:Array[Item] = []
 
-signal inventory_updated
 
 func add_item(item:Item):
-	_content.append(item)
-	emit_signal("inventory_updated")
+	for existing_stack in _content:
+		if existing_stack.name == item.name and existing_stack.count < existing_stack.maxStack:
+			existing_stack.count += 1
+			return
+	var new_item = item.duplicate()
+	new_item.count = 1
+	_content.append(new_item)
+	
+	
 
 func remove_item(item:Item):
 	_content.erase(item)
-	inventory_updated.emit()
 
 func get_items() -> Array[Item]:
 	return _content

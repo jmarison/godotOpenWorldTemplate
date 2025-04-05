@@ -10,3 +10,4 @@ name = "unknown item"
 scene = ExtResource("2_ijuyo")
 icon = ExtResource("1_30vae")
 maxStack = 50
+count = 0.0
