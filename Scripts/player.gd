@@ -17,6 +17,7 @@ var damage = 20
 var look_dir: Vector2
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+@onready var inHand = $Head/Camera3D/inHand
 #guns
 @onready var shotgun = $Head/Camera3D/Shotgun
 @onready var shotgunShootAnimation = $Head/Camera3D/Shotgun/AnimationPlayer
@@ -35,8 +36,9 @@ var bullet_trail = load("res://Objects/bullet_trail.tscn")
 var locked = false
 
 func _ready():
-	inventory.connect("inventory_updated", _update_inventory)
+	#inventory.connect("inventory_updated", _update_inventory)
 	_update_hotbar()
+	
 	
 	
 func _physics_process(delta):
@@ -130,6 +132,7 @@ func on_item_picked_up(item:Item):
 	inventory.add_item(item)
 	_update_hotbar()
 	_update_inventory()
+	inHand.setItem(item)
 
 func _update_hotbar():
 	hotbar.showHotbar(inventory.get_items())

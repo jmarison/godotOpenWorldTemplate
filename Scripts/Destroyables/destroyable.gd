@@ -9,13 +9,12 @@ func _ready():
 
 
 func _process(delta: float) -> void:
-	if (obj.hp <= 0):
+	if (obj.hp < 1):
 		queue_free()
 		dropItems()
 
 
-	#obj.hp -= damage
-	#print(obj.name + " " + obj.hp)
+
 
 func dropItems():
 	for item in obj.droppedItems:
@@ -24,4 +23,5 @@ func dropItems():
 
 
 func _on_static_body_3d_take_damage() -> void:
-	print("signal made it :>")
+	obj.hp -= 25
+	print("hit")
