@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://drumm5isdd8hs" path="res://Objects/shotgun.tscn" id="3_dw4bu"]
 [ext_resource type="Script" path="res://Scripts/in_hand.gd" id="4_bjpxy"]
 [ext_resource type="Script" path="res://Scripts/hotbar.gd" id="4_svwuo"]
-[ext_resource type="Resource" uid="uid://8xicv6bkknbs" path="res://DATA/Items/grimSword.tres" id="5_bvavt"]
+[ext_resource type="Resource" uid="uid://bqptainumw5w4" path="res://DATA/Items/blank.tres" id="5_65st3"]
 [ext_resource type="PackedScene" uid="uid://b084j5ynudocn" path="res://Scripts/inventory/item_slot.tscn" id="5_q26ug"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_itarw"]
@@ -50,7 +50,7 @@ target_position = Vector3(0, 0, -4)
 [node name="inHand" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(0.745753, 0, -0.079698, 0, 0.75, 0, 0.079698, 0, 0.745753, 0.573213, -0.508787, -0.504653)
 script = ExtResource("4_bjpxy")
-inHandItem = ExtResource("5_bvavt")
+inHandItem = ExtResource("5_65st3")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_energy = 0.628
