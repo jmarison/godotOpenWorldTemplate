@@ -79,7 +79,7 @@ func _physics_process(delta):
 		
 	#head bob
 	t_bob += delta * velocity.length() * float(is_on_floor())
-	shotgun.transform.origin = _headbob(t_bob) + Vector3(0.202, -0.225, -.454)
+	head.transform.origin = _headbob(t_bob) + Vector3(0.202, -0.225, -.454)
 	
 	 
 	
